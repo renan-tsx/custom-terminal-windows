@@ -48,7 +48,7 @@ Acesse o link para outras formas de instalação e saber mais sobre ao app. </br
 <a id="git"></a>
 ## Git
 
-Certifique que o Git esteja instalado.
+Certifique que o Git esteja instalado ou baixe e instale.
 
 [Downloads](https://git-scm.com/downloads)
 
@@ -57,9 +57,17 @@ Certifique que o Git esteja instalado.
 
 Scoop é um instalador de programas via terminal. </br>
 Abra o Windows PowerShell como administrador. </br>
-Se o comando `scoop -v` for aceito aparecerá a versão instalada. </br>
+Se o comando `scoop -v` for aceito aparecerá a versão instalada, caso contrário instale-o. </br>
 
-Para instalar acesse o link e siga os passos
+Execute o comando no Windows PowerShell irm `get.scoop.sh | iex`. Se apresentar erro relacionado a instalação como administrador desabilitada execute os comandos.
+
+`irm get.scoop.sh -outfile 'install.ps1'` </br>
+`.\install.ps1 -RunAsAdmin [-OtherParameters ...]` </br>
+`iex "& {$(irm get.scoop.sh)} -RunAsAdmin"` </br>
+
+Execute o comando para verificar a instalação `scoop -v`
+
+Se mesmo assim a instalação não ocorrer siga os passos da documentação.
 
 [](https://scoop.sh/)
 
@@ -68,9 +76,15 @@ Para instalar acesse o link e siga os passos
 
 Um mecanismo de temas para qualquer Shell. </br>
 Abra o Windows PowerShell como administrador. </br>
-Se o comando `oh-my-posh --version` for aceito aparecerá a versão instalada. </br>
+Se o comando `oh-my-posh --version` for aceito aparecerá a versão instalada, caso contrário instale. </br>
 
-Para instalar acesse o link e siga os passos
+Execute o comando </br>
+
+`scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json` </br>
+
+Cerifique que foi instalado executando o comando `oh-my-posh --version`, se tudo deu certo a versão do aplicativo será apresentada.
+
+Se mesmo assim a instalação não ocorrer siga os passos da documentação.
 
 [Windows | Oh My Posh](https://ohmyposh.dev/docs/installation/windows)
 
@@ -103,30 +117,32 @@ Salve as novas configurações
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%203.png)
 
-Feche a abra novamente o Windows Terminal para ter acesso a nova opção
+Abra uma nova guia para ter acesso a nova opção. </br>
+Reinicie o Terminal se necessário. </br>
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%204.png)
 
-Esse é o terminah Git Bash integrado ao Windows Terminal.
+Esse é o Terminal Git Bash integrado ao Windows Terminal. </br>
 
-Os próximos será adicionar Temas.
+Os próximos passos será adicionar Temas.
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%205.png)
 
 <a id="temas"></a>
 ## Temas para Windows Terminal
 
-O tema de sua preferência pode ser escolhido no site abaixo, clique em Get theme para copiar.
+O tema de sua preferência pode ser escolhido no site abaixo. </br>
+Com o site aberto escolha o tema e clique em Get theme para copiar.
 
 [Windows Terminal Themes](https://windowsterminalthemes.dev/)
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%206.png)
 
-Abra novamente as configurações do Windows Terminal e clique em Abrir o arquivo JSON 
+Abra as configurações do Windows Terminal e clique em Abrir o arquivo JSON.
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%207.png)
 
-Adicione o novo tema junto com os temas existentes
+Adicione o novo tema junto com os temas existentes.
 
 ```json
 "schemes": 
@@ -159,7 +175,6 @@ Adicione o novo tema junto com os temas existentes
 ```
 
 Modifique a propriedade `profiles` para o formato abaixo. </br>
-A propriedade `list` pode estar em outro local, migre ela para dentro de profiles.
 
 ```json
 "profiles": 
@@ -184,14 +199,14 @@ A propriedade `list` pode estar em outro local, migre ela para dentro de profile
     },
 ```
 
-Tema Dark aplicado
+Se tudo deu certo esse será o tema aplicado.
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%208.png)
 
 <a id="ohmyposhconfig"></a>
 ## Oh-my-posh
 
-Crie o arquivo .bashrc dentro de C:/Users/<seu usuário>
+Crie o arquivo `.bashrc` dentro de `C:/Users/<seu usuário>`
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%209.png)
 
@@ -206,11 +221,11 @@ eval "$(oh-my-posh --init --shell bash --config ~/scoop/apps/oh-my-posh/current/
 ```
 
 Para visualizar o novo tema abra uma nova aba. </br>
-Reinicie o terminal se necessário.
+Reinicie o Terminal se necessário.
 
 ![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/1d1f1a3ec9f9386887e00067f5c778db5eb770cc/Untitled%2010.png)
 
-Acesse para outros temas
+Acesse o link para mais temas
 
 [Themes | Oh My Posh](https://ohmyposh.dev/docs/themes)
 
