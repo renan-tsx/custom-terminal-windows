@@ -13,6 +13,7 @@ Personalize o novo Windows Terminal, integre o Git Bash ao Windows Terminal e Pe
     - [Adicionar Git Bash no Terminal](#addgit)
     - [Temas para Windows Terminal](#temas)
     - [Oh-my-posh](#ohmyposhconfig)
+- [Terminal VSCode](#vscode)
 - [Consideracoes](#consideracoes)
 - [Tutorial Notion](#notion)
 
@@ -228,6 +229,26 @@ Reinicie o Terminal se necessário.
 Acesse o link para mais temas
 
 [Themes | Oh My Posh](https://ohmyposh.dev/docs/themes)
+
+<a id="vscode"></a>
+# Terminal VSCode
+
+Abra as configurações do VSCode `ctrl+p` e busque por `>settings.json`
+
+![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/a57cf73aea58e4d70e659de59477e8d5062a4e0e/Untitled11.png)
+
+Adicione as novas configurações
+
+```
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+"terminal.integrated.fontFamily": "MesloLGM NF",
+```
+
+![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/a57cf73aea58e4d70e659de59477e8d5062a4e0e/Untitled12.png)
+
+Se tudo deu certo essa é nova aparência do terminal.
+
+![Untitled](https://github.com/renan-tsx/custom-terminal-windows/blob/a57cf73aea58e4d70e659de59477e8d5062a4e0e/Untitled13.png)
 
 <a id="consideracoes"></a>
 # Considerações
